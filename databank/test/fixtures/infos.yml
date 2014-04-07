@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  fm_no: MyString
+  charge_code: MyString
+  project_name: MyString
+  portfolio: MyString
+  remarks: MyString
+  non_billable: false
+  released: false
+  weekinfo_id: 
+
+two:
+  name: MyString
+  fm_no: MyString
+  charge_code: MyString
+  project_name: MyString
+  portfolio: MyString
+  remarks: MyString
+  non_billable: false
+  released: false
+  weekinfo_id: 

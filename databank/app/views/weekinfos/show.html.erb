@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From date:</strong>
+  <%= @weekinfo.from_date %>
+</p>
+<h2>Add info:</h2>
+<%= form_for([@weekinfo, @weekinfo.infos.build]) do |f| %>
+<p>
+    <%= f.label :name %><br />
+    <%= f.text_area :name %>
+  </p>
+    <p>
+    <%= f.label :fm_no %><br />
+    <%= f.text_area :fm_no %>
+  </p>
+    <p>
+    <%= f.label :charge_code %><br />
+    <%= f.text_area :charge_code %>
+  </p>
+    <p>
+    <%= f.label :project_name %><br />
+    <%= f.text_area :project_name %>
+  </p>
+    <p>
+    <%= f.label :portfolio %><br />
+    <%= f.text_area :portfolio %>
+  </p>
+    <p>
+    <%= f.label :remarks %><br />
+    <%= f.text_area :remarks %>
+  </p>
+    <p>
+    <%= f.label :non_billable %><br />
+    <%= f.text_area :non_billable %>
+  </p>
+    <p>
+    <%= f.label :released %><br />
+    <%= f.text_area :released %>
+  </p>
+    <p>
+    <%= f.label :weekinfo_id %><br />
+    <%= f.text_area :weekinfo_id %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<%end%>
+
+<%= link_to 'Edit', edit_weekinfo_path(@weekinfo) %> |
+<%= link_to 'Back', weekinfos_path %>

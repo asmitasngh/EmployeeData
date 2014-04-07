@@ -1,0 +1,53 @@
+<%= form_for(@info) do |f| %>
+  <% if @info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@info.errors.count, "error") %> prohibited this info from being saved:</h2>
+
+      <ul>
+      <% @info.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :fm_no %><br>
+    <%= f.text_field :fm_no %>
+  </div>
+  <div class="field">
+    <%= f.label :charge_code %><br>
+    <%= f.text_field :charge_code %>
+  </div>
+  <div class="field">
+    <%= f.label :project_name %><br>
+    <%= f.text_field :project_name %>
+  </div>
+  <div class="field">
+    <%= f.label :portfolio %><br>
+    <%= f.text_field :portfolio %>
+  </div>
+  <div class="field">
+    <%= f.label :remarks %><br>
+    <%= f.text_field :remarks %>
+  </div>
+  <div class="field">
+    <%= f.label :non_billable %><br>
+    <%= f.check_box :non_billable %>
+  </div>
+  <div class="field">
+    <%= f.label :released %><br>
+    <%= f.check_box :released %>
+  </div>
+  <div class="field">
+    <%= f.label :weekinfo %><br>
+    <%= f.text_field :weekinfo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

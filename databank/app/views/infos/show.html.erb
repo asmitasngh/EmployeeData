@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @info.name %>
+</p>
+
+<p>
+  <strong>Fm no:</strong>
+  <%= @info.fm_no %>
+</p>
+
+<p>
+  <strong>Charge code:</strong>
+  <%= @info.charge_code %>
+</p>
+
+<p>
+  <strong>Project name:</strong>
+  <%= @info.project_name %>
+</p>
+
+<p>
+  <strong>Portfolio:</strong>
+  <%= @info.portfolio %>
+</p>
+
+<p>
+  <strong>Remarks:</strong>
+  <%= @info.remarks %>
+</p>
+
+<p>
+  <strong>Non billable:</strong>
+  <%= @info.non_billable %>
+</p>
+
+<p>
+  <strong>Released:</strong>
+  <%= @info.released %>
+</p>
+
+<p>
+  <strong>Weekinfo:</strong>
+  <%= @info.weekinfo %>
+</p>
+
+<%= link_to 'Edit', edit_info_path(@info) %> |
+<%= link_to 'Back', infos_path %>

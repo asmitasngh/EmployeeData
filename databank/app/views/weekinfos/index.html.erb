@@ -1,0 +1,40 @@
+<script type="text/javascript">
+  jQuery.noConflict();
+  jQuery(document).ready(function($) {
+    // here the $ function is jQuery's because it's an argument
+    // to the ready handler
+    $('#dateField').datepicker();
+  });
+  // here the $ function is Prototype's
+</script>
+
+<h1>Listing weekinfos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>From date</th>
+      <!-- <th></th>
+      <th></th>
+      <th></th>
+    </tr> -->
+      <th><input type="text" id="dateField"></th></tr>
+  <tr><td><input type="button" value="Copy from existing"></td><td><input type="button" value="Upload new"></td></tr>
+</table>
+  </thead>
+
+  <tbody>
+    <% @weekinfos.each do |weekinfo| %>
+      <tr>
+        <td><%= weekinfo.from_date %></td>
+        <td><%= link_to 'Show', weekinfo %></td>
+        <td><%= link_to 'Edit', edit_weekinfo_path(weekinfo) %></td>
+        <td><%= link_to 'Destroy', weekinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Weekinfo', new_weekinfo_path %>

@@ -1,0 +1,43 @@
+<h1>Listing infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Fm no</th>
+      <th>Charge code</th>
+      <th>Project name</th>
+      <th>Portfolio</th>
+      <th>Remarks</th>
+      <th>Non billable</th>
+      <th>Released</th>
+      <th>Weekinfo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @infos.each do |info| %>
+      <tr>
+        <td><%= info.name %></td>
+        <td><%= info.fm_no %></td>
+        <td><%= info.charge_code %></td>
+        <td><%= info.project_name %></td>
+        <td><%= info.portfolio %></td>
+        <td><%= info.remarks %></td>
+        <td><%= info.non_billable %></td>
+        <td><%= info.released %></td>
+        <td><%= info.weekinfo %></td>
+        <td><%= link_to 'Show', info %></td>
+        <td><%= link_to 'Edit', edit_info_path(info) %></td>
+        <td><%= link_to 'Destroy', info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Info', new_info_path %>
