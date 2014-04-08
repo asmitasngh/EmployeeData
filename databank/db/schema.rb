@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140407120531) do
     t.datetime "updated_at"
   end
 
-  add_index "infos", ["weekinfo_id"], name: "index_infos_on_weekinfo_id"
+  add_index "infos", ["weekinfo_id"], name: "index_infos_on_weekinfo_id", using: :btree
 
   create_table "weekinfos", force: true do |t|
     t.date     "from_date"
